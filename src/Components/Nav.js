@@ -2,6 +2,7 @@ import { Typography, Box, IconButton } from "@mui/material";
 import React from "react";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
+import { Link } from "react-router-dom";
 
 export default function Nav({ darkMode, toggleDarkMode }) {
   return (
@@ -29,9 +30,11 @@ export default function Nav({ darkMode, toggleDarkMode }) {
             justifyItems: "space-between",
           }}
         >
-          <Typography sx={{ mx: 4 }} textAlign={"center"}>
-            About
-          </Typography>
+          <Link to="/help">
+            <Typography sx={{ mx: 4 }} textAlign={"center"}>
+              Help
+            </Typography>
+          </Link>
           <Typography sx={{ mr: 4 }} textAlign={"center"}>
             Documentations
           </Typography>

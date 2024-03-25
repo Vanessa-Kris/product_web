@@ -6,6 +6,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 import Footer from "./Components/Footer";
 import Nav from "./Components/Nav";
 import Landing from "./Pages/Landing";
+import Help from "./Pages/Help";
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(true);
@@ -27,7 +28,7 @@ const App = () => {
         <Nav darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         <Routes>
           <Route path="/" element={<Landing />} />
-          {/* <Route path="/about" element={<About />} /> */}
+          <Route path="/help" element={<Help />} />
         </Routes>
         <Footer />
       </Router>
