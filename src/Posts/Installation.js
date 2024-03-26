@@ -19,7 +19,7 @@ export default function Installation() {
         <ListItemButton>Mac</ListItemButton>
       </List>
       <Box>
-        <Typography variant="h4" sx={{ fontWeight: 700, pb: 3 }}>
+        <Typography variant="h6" sx={{ fontWeight: 700, pb: 3 }}>
           Android
         </Typography>
         <Typography variant="body1">
@@ -41,7 +41,7 @@ export default function Installation() {
       </Box>
       {/*  */}
       <Box>
-        <Typography variant="h4" sx={{ fontWeight: 700, pb: 3 }}>
+        <Typography variant="h6" sx={{ fontWeight: 700, pb: 3 }}>
           iOS
         </Typography>
         <Typography variant="body1">
@@ -63,7 +63,7 @@ export default function Installation() {
       </Box>
       {/*  */}
       <Box>
-        <Typography variant="h4" sx={{ fontWeight: 700, pb: 3 }}>
+        <Typography variant="h6" sx={{ fontWeight: 700, pb: 3 }}>
           Desktop
         </Typography>
         <Typography variant="body1">

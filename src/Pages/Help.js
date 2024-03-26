@@ -59,7 +59,9 @@ export default function Help(index) {
 
   return (
     <>
-      <Box sx={{ px: 15, pt: 4, display: "flex" }}>
+      <Box
+        sx={{ px: { md: 15, xs: 2 }, pt: { md: 4, xs: 10 }, display: "flex" }}
+      >
         <Typography sx={{ px: 2 }}>Help</Typography>
         <FaChevronRight style={{ marginTop: 4 }} />
         <Typography sx={{ px: 2, color: "#4E6A80" }}>
@@ -72,14 +74,15 @@ export default function Help(index) {
           bgcolor: "background.paper",
           display: "flex",
           height: "100%",
-          mx: 15,
-          py: 12,
+          mx: { md: 15, xs: 1 },
+          py: { md: 12, xs: 5 },
         }}
       >
         <Grid container>
           <Grid
             item
             md={3}
+            xs={3}
             sx={{
               position: "sticky",
               top: 50,
@@ -161,7 +164,7 @@ export default function Help(index) {
               />
             </Tabs>
           </Grid>
-          <Grid item md={9}>
+          <Grid item md={9} xs={9}>
             <TabPanel value={value} index={0}>
               <Installation />
             </TabPanel>

@@ -4,10 +4,11 @@ import { FaCircleArrowRight } from "react-icons/fa6";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Faqs from "../Components/FAQs";
+import { Link } from "react-router-dom";
 
 export default function Landing() {
   return (
-    <Box sx={{ mx: 15, my: 2 }}>
+    <Box sx={{ mx: { md: 15, sm: 10, xs: 3 }, my: { md: 2, xs: 10 } }}>
       {/* Banner Page */}
       <Grid container>
         <Grid
@@ -28,14 +29,14 @@ export default function Landing() {
           </Typography>
           {/*  */}
           <Grid container>
-            <Grid item md={3}>
+            <Grid item md={3} xs={6}>
               <Box
                 component="img"
                 src="/googleplay.png"
                 sx={{ width: "100%" }}
               />
             </Grid>
-            <Grid item md={3}>
+            <Grid item md={3} xs={6}>
               <Box
                 component="img"
                 src="/googleplay.png"
@@ -47,32 +48,47 @@ export default function Landing() {
       </Grid>
       {/*  */}
       {/* About Section */}
-      <Box textAlign="center" sx={{ py: 20, px: 30 }}>
-        <Typography variant="h4" sx={{ fontWeight: 700 }}>
+      <Box
+        textAlign="center"
+        sx={{ py: { md: 20, xs: 7 }, px: { md: 30, xs: 3 } }}
+      >
+        <Typography
+          variant="h4"
+          sx={{ fontWeight: 700, fontSize: { xs: "25px", md: "30px" } }}
+        >
           With RelaySMS, you can send emails, tweet and chat on telegram without
           an active internet connection.
         </Typography>
-        <Typography variant="body1" sx={{ p: 5 }}>
+        <Typography variant="body1" sx={{ p: { md: 5, xs: 2 } }}>
           By setting up your account while you have an internet connection, you
           can continue to communicate later using SMS when your no longer have
           internet access. In the case where you have no stored token,
           communicate using Relay Bridges.
         </Typography>
-        <Typography variant="body1" sx={{ p: 2, textDecoration: "underline" }}>
-          Getting Started{" "}
-          <FaCircleArrowRight size="20px" style={{ rotate: "-30deg" }} />
-        </Typography>
+        <Link to="/help">
+          <Typography
+            variant="body1"
+            sx={{ p: 2, textDecoration: "underline" }}
+          >
+            Getting Started{" "}
+            <FaCircleArrowRight size="20px" style={{ rotate: "-30deg" }} />
+          </Typography>
+        </Link>
       </Box>
       {/*  */}
       {/* How Relay Works */}
-      <Box className="cards" sx={{ p: 8, borderRadius: "20px" }}>
+      <Box className="cards" sx={{ p: { md: 8, xs: 2 }, borderRadius: "20px" }}>
         <Grid container rowSpacing={8}>
           <Grid
             item
             md={6}
             sx={{ justifyContent: "center", display: "flex", mx: "auto" }}
           >
-            <Box component="img" src="/secure.svg" sx={{ width: "50%" }} />
+            <Box
+              component="img"
+              src="/secure.svg"
+              sx={{ width: { md: "50%", xs: "80%" } }}
+            />
           </Grid>
           <Grid item md={6} my="auto">
             <Typography variant="h6" sx={{ fontWeight: 700, py: 2 }}>
@@ -102,7 +118,11 @@ export default function Landing() {
             md={6}
             sx={{ justifyContent: "center", display: "flex", mx: "auto" }}
           >
-            <Box component="img" src="/open.svg" sx={{ width: "50%" }} />
+            <Box
+              component="img"
+              src="/open.svg"
+              sx={{ width: { md: "50%", xs: "80%" } }}
+            />
           </Grid>
 
           <Grid
@@ -110,10 +130,14 @@ export default function Landing() {
             md={6}
             sx={{ justifyContent: "center", display: "flex", mx: "auto" }}
           >
-            <Box component="img" src="/serer.svg" sx={{ width: "50%" }} />
+            <Box
+              component="img"
+              src="/serer.svg"
+              sx={{ width: "50%", display: { md: "block", xs: "none" } }}
+            />
           </Grid>
           <Grid item md={6} my="auto">
-            <Typography variant="h6" sx={{ fontWeight: 700, py: 2 }}>
+            <Typography variant="h6" sx={{ fontWeight: 700, py: 1 }}>
               Decentralized
             </Typography>
             <Typography variant="body1">
@@ -128,9 +152,12 @@ export default function Landing() {
       {/*  */}
       {/* Rlay Map */}
       <Box>
-        <Grid container sx={{ py: 15 }}>
+        <Grid container rowSpacing={4} sx={{ py: { md: 15, xs: 10 } }}>
           <Grid item md={5} my="auto">
-            <Typography variant="h3" sx={{ fontWeight: 700 }}>
+            <Typography
+              variant="h3"
+              sx={{ fontWeight: 700, fontSize: { md: "48px", xs: "33px" } }}
+            >
               RelaySMS is actively used in over 60 countries.
             </Typography>
           </Grid>
@@ -150,21 +177,22 @@ export default function Landing() {
       {/*  */}
       {/* Video */}
       <Box>
-        {/* <iframe
-          width="860"
-          height="415"
-          src="https://www.youtube.com/embed/NLp4VSYGR4Y?si=EmNrXJKsrkIuOEPs"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-        ></iframe> */}
         <Box>
-          <Grid container columnSpacing={4} sx={{ py: 15 }}>
+          <Grid
+            container
+            rowSpacing={4}
+            columnSpacing={4}
+            sx={{ py: { md: 15, xs: 10 } }}
+          >
             <Grid
               item
               md={7}
-              sx={{ justifyContent: "center", display: "flex", mx: "auto" }}
+              sx={{
+                justifyContent: "center",
+                display: "flex",
+                mx: "auto",
+                width: "100%",
+              }}
             >
               <iframe
                 width="860"
@@ -177,7 +205,10 @@ export default function Landing() {
               ></iframe>
             </Grid>
             <Grid item md={5} my="auto">
-              <Typography variant="h3" sx={{ fontWeight: 700 }}>
+              <Typography
+                variant="h3"
+                sx={{ fontWeight: 700, fontSize: { md: "48px", xs: "33px" } }}
+              >
                 Get familiar with RelaySMS
               </Typography>
             </Grid>

@@ -11,7 +11,7 @@ export default function Footer() {
       >
         <Box>
           <Grid container justifyContent="space-between">
-            <Grid item md={4} xs={6}>
+            <Grid item md={4} xs={12}>
               <Box sx={{ display: "flex", pt: 3 }}>
                 <Box
                   component="img"
@@ -23,13 +23,13 @@ export default function Footer() {
                   RelaySMS
                 </Typography>
               </Box>
-              <Typography variant="body2" sx={{ px: 9, py: 2 }}>
+              <Typography variant="body2" sx={{ px: { md: 4, xs: 2 }, py: 2 }}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
                 dignissim purus eu nunc ullamcorper, vel convallis ante
                 tincidunt.
               </Typography>
             </Grid>
-            <Grid item md={2} xs={6}>
+            <Grid item md={2} xs={12}>
               <List>
                 <ListItem variant="body1" sx={{ fontWeight: 600 }}>
                   Quick links
@@ -40,7 +40,7 @@ export default function Footer() {
                 <ListItem variant="body1">Developers</ListItem>
               </List>
             </Grid>
-            <Grid item md={2} xs={6}>
+            <Grid item md={2} xs={12}>
               <List>
                 <ListItem variant="body1" sx={{ fontWeight: 600 }}>
                   Socials
@@ -61,7 +61,7 @@ export default function Footer() {
                 </ListItem>
               </List>
             </Grid>
-            <Grid item md={2} xs={6}>
+            <Grid item md={2} xs={12}>
               <List>
                 <ListItem variant="body1" sx={{ fontWeight: 600 }}>
                   Download
@@ -76,7 +76,7 @@ export default function Footer() {
           </Grid>
           <br />
         </Box>
-        <Typography variant="body1" sx={{ mx: 2 }}>
+        <Typography variant="body1" sx={{ mx: 4 }}>
           © 2024 SMSWithoutBorders
         </Typography>
       </Box>
