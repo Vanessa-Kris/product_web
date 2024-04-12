@@ -7,7 +7,14 @@ export default function Footer() {
     <>
       <Box
         component="footer"
-        sx={{ bgcolor: "black", color: "white", p: 3, px: 2 }}
+        sx={{
+          bgcolor: "black",
+          color: "white",
+          p: 3,
+          px: { xs: 3, md: 10 },
+          position: "static",
+          bottom: 0,
+        }}
       >
         <Box>
           <Grid container justifyContent="space-between">
@@ -36,7 +43,7 @@ export default function Footer() {
                 </ListItem>
                 <ListItem variant="body1">Blogs</ListItem>
                 <ListItem variant="body1">Documentation</ListItem>
-                <ListItem variant="body1">Deku SMS</ListItem>
+                <ListItem variant="body1">Privacy Policy</ListItem>
                 <ListItem variant="body1">Developers</ListItem>
               </List>
             </Grid>

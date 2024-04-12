@@ -75,7 +75,7 @@ export default function Help(index) {
           display: "flex",
           height: "100%",
           mx: { md: 15, xs: 1 },
-          py: { md: 12, xs: 5 },
+          py: { md: 8, xs: 5 },
         }}
       >
         <Grid container>

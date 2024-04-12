@@ -2,7 +2,6 @@ import { Typography, Box, IconButton, Grid } from "@mui/material";
 import React from "react";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
-import { Link } from "react-router-dom";
 
 export default function Nav({ darkMode, toggleDarkMode }) {
   return (
@@ -11,11 +10,11 @@ export default function Nav({ darkMode, toggleDarkMode }) {
         component="nav"
         sx={{
           display: { md: "flex", xs: "none", sm: "flex" },
-          justifyContent: "space-between",
+          justifyContent: "end",
           py: 3,
           mx: 5,
-          position: "fixed",
           right: 0,
+          color: "white",
         }}
       >
         <Box sx={{ display: "flex" }}>
@@ -30,17 +29,29 @@ export default function Nav({ darkMode, toggleDarkMode }) {
               justifyItems: "space-between",
             }}
           >
-            <Link to="/help">
+            <a href="/help">
               <Typography sx={{ mx: 4 }} textAlign={"center"}>
                 Help
               </Typography>
-            </Link>
-            <Typography sx={{ mr: 4 }} textAlign={"center"}>
-              Documentations
-            </Typography>
-            <Typography sx={{ mr: 4 }} textAlign={"center"}>
-              Blog
-            </Typography>
+            </a>
+            <a
+              href="https://developers.smswithoutborders.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Typography sx={{ mr: 4 }} textAlign={"center"}>
+                Documentations
+              </Typography>
+            </a>
+            <a
+              href="https://blog.smswithoutborders.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Typography sx={{ mr: 4 }} textAlign={"center"}>
+                Blog
+              </Typography>
+            </a>
           </Box>
           <Typography
             className="cards"
@@ -68,8 +79,8 @@ export default function Nav({ darkMode, toggleDarkMode }) {
           justifyContent: "space-between",
           py: { md: 3, xs: 2 },
           mx: 1,
-          position: "fixed",
-          top: 0,
+
+          color: "white",
         }}
       >
         <Grid container>
@@ -85,17 +96,41 @@ export default function Nav({ darkMode, toggleDarkMode }) {
                 justifyItems: "space-between",
               }}
             >
-              <Link to="/help">
-                <Typography variant="body2" sx={{ mx: 1 }} textAlign={"center"}>
+              <a href="/help">
+                <Typography
+                  variant="body2"
+                  sx={{ mx: 1, fontSize: "13px" }}
+                  textAlign={"center"}
+                >
                   Help
                 </Typography>
-              </Link>
-              <Typography variant="body2" sx={{ mr: 1 }} textAlign={"center"}>
-                Documentations
-              </Typography>
-              <Typography variant="body2" sx={{ mr: 1 }} textAlign={"center"}>
-                Blog
-              </Typography>
+              </a>
+              <a
+                href="https://developers.smswithoutborders.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Typography
+                  variant="body2"
+                  sx={{ mr: 1, fontSize: "13px" }}
+                  textAlign={"center"}
+                >
+                  Documentations
+                </Typography>
+              </a>
+              <a
+                href="https://blog.smswithoutborders.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Typography
+                  variant="body2"
+                  sx={{ mr: 1, fontSize: "13px" }}
+                  textAlign={"center"}
+                >
+                  Blog
+                </Typography>
+              </a>
             </Box>
             <Typography
               variant="body2"
